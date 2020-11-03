@@ -1,0 +1,8 @@
+variable      Au equal 1
+variable      mW equal 2
+neighbor      2.0 bin
+neigh_modify  every 1 delay 5 check yes
+set           type ${mW} charge .0
+set           type ${Au} charge .0
+pair_style    sw_mod
+pair_coeff    * * system.sw Au mW
